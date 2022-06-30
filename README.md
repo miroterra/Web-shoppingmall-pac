@@ -24,3 +24,9 @@ controllers 폴더에 auth-controller.js 생성
 app.js 에 auth라우트 가져오기
 
 ejs 설치
+app.js에 ejs 연동
+views -> auth 폴더에 signup,login.ejs 생성
+views 폴더에 customer 폴더 생성
+auth, cart, products 폴더 이동 + includes 폴더 생성
+includes 폴더에 head, header.ejs 생성
+head,header,footer 만들고 signup.ejs에 include
