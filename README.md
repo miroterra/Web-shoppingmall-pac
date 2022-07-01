@@ -29,4 +29,5 @@ views -> auth 폴더에 signup,login.ejs 생성
 views 폴더에 customer 폴더 생성
 auth, cart, products 폴더 이동 + includes 폴더 생성
 includes 폴더에 head, header.ejs 생성
-head,header,footer 만들고 signup.ejs에 include
+head,header,footer 만들고 signup.ejs 마크업
+head.ejs 에 구글 폰트와 css 넣기

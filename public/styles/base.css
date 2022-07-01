@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', 'sans-serif';
+
+  --color-gray-300: rgb(99, 92, 86);
+  --color-gray-500: rgb(37, 34, 31);
+}
