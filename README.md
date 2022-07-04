@@ -31,3 +31,8 @@ auth, cart, products 폴더 이동 + includes 폴더 생성
 includes 폴더에 head, header.ejs 생성
 head,header,footer 만들고 signup.ejs 마크업
 head.ejs 에 구글 폰트와 css 넣기
+
+base, auth, forms.css 인증 관련 css 작성
+mongodb 사용 데이터베이스 서버 구축
+npm install mongodb
+data폴더 database.js 생성
