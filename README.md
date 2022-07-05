@@ -36,3 +36,11 @@ base, auth, forms.css 인증 관련 css 작성
 mongodb 사용 데이터베이스 서버 구축
 npm install mongodb
 data폴더 database.js 생성
+database 작성 MVC -> models user-model.js 작성
+암호 해싱을 위해 bcryptjs 설치
+auth-controller 작성
+login.ejs 작성
+CSRF 보호 -> csurf 설치
+middlewares 폴더 csrf-token 작성 -> login,signup.ejs input hidden으로 csrf 처리
+error-handler.js 작성
+npm install express-session connect-mongodb-session
