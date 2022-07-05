@@ -36,3 +36,6 @@ base, auth, forms.css 인증 관련 css 작성
 mongodb 사용 데이터베이스 서버 구축
 npm install mongodb
 data폴더 database.js 생성
+database 작성
+MVC -> models user.js 작성
+암호 해싱을 위해 bcryptjs 설치
