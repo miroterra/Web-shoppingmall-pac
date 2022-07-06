@@ -21,6 +21,7 @@ app.use(csrf());
 app.use(addCsrfTokenMiddleware);
 
 app.use(errorHandlerMiddleware);
+
 app.use(authRoutes);
 
 db.connectToDatabase()
