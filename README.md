@@ -47,3 +47,7 @@ error-handler.js 작성
 npm install express-session connect-mongodb-session
 config폴더 session.js 작성
 auth-controller, user-model.js 추가 작성
+util폴더 authentication.js 작성
+auth-controller 추가 작성 후 view all-products 작성
+routes 폴더 base-routes.js, products.routes.js 생성
+app.js에 만든 라우트 연동
