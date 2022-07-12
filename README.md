@@ -48,6 +48,15 @@ npm install express-session connect-mongodb-session
 config폴더 session.js 작성
 auth-controller, user-model.js 추가 작성
 util폴더 authentication.js 작성
-auth-controller 추가 작성 후 view all-products 작성
+auth-controller login function 추가 작성 후 view all-products 작성
 routes 폴더 base-routes.js, products.routes.js 생성
-app.js에 만든 라우트 연동
+app.js에 만든 라우트 연동 - 인증 & 사용자 로그인 구현
+
+middlewares 폴더 check-auth.js 작성
+app.js 에 등록
+auth-controller.js module.exports에 login 추가
+auth-router.js 에 post 라우터 login 추가
+header.ejs 에 로그인 시 logout 버튼 생성 되게 작성 - csrf토큰은 모든 post 요청에 필요함
+auth-controller에 logout function 작성
+util authentication.js 에 destroyUserAuthSession function 작성
+auth-router에 logout 포스트 작성

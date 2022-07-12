@@ -26,7 +26,7 @@ async function login(req, res) {
     return;
   }
 
-  const passwordIsCorrect = await user.hasMatchingPassword(existingUser.hasMatchingPassword);
+  const passwordIsCorrect = await user.hasMatchingPassword(existingUser.password);
 
   if (!passwordIsCorrect) {
     res.redirect('/login');
@@ -38,8 +38,15 @@ async function login(req, res) {
   });
 }
 
+function logout(req, res) {
+  authUtil.destroyUserAuthSession(req);
+  res.redirect('/login');
+}
+
 module.exports = {
   getSignup: getSignup,
   getLogin: getLogin,
   signup: signup,
+  login: login,
+  logout: logout,
 };
