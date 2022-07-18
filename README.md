@@ -61,3 +61,5 @@ auth-controller에 logout function 작성
 util authentication.js 에 destroyUserAuthSession function 작성
 auth-router에 logout 포스트 작성
 auth-controller에 오류 처리
+유효성 검사 관련 논리 -
+util - validation.js 작성
