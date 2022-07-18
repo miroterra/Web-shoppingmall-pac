@@ -1,5 +1,6 @@
 const User = require('../models/user-model');
 const authUtil = require('../util/authentication');
+const userDetailsAreValid = require('../util/validation');
 
 function getSignup(req, res) {
   res.render('customer/auth/signup');
@@ -7,6 +8,11 @@ function getSignup(req, res) {
 
 async function signup(req, res, next) {
   const user = new User(req.body.email, req.body.password, req.body.fullname, req.body.street, req.body.postal, req.body.city);
+
+  if (!userDetailsAreValid(req.body.email, req.body.password, req.body.fullname, req.body.street, req.body.postal, req.body.city)) {
+    res.redirect('/signup');
+    return;
+  }
 
   //오류처리
   try {
