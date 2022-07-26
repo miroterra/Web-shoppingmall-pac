@@ -10,4 +10,8 @@ function userDatailsAreValid(email, password, name, street, postal, city) {
   return userCredentialsAreValid(email, password) && !isEmpty(name) && !isEmpty(street) && !isEmpty(postal) && !isEmpty(city);
 }
 
-module.exports = userDatailsAreValid;
+function emailIsConfirmed(email, confirmEmail) {
+  return email === confirmEmail;
+}
+
+module.exports = { userDetailsAreValid: userDetailsAreVaild, emailIsConfirmed: emailIsConfirmed };
