@@ -19,7 +19,11 @@ class User {
   }
 
   async existsAlready() {
-    await this.getUserWithSameEmail();
+    const existingUser = await this.getUserWithSameEmail();
+    if (existingUser) {
+      return true;
+    }
+    return false;
   }
 
   async signup() {
