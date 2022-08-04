@@ -22,3 +22,6 @@ signup.ejs와 login.ejs에 내용 추가하고 base.css 에 오류 표기 css �
 관리자에 대한 세션을 확인해야하기 떄문에 util - authentication.js에 isAdmin 플래그를 추가 하여 세션에 저장
 middlewares - check-auth에서 내용 추출
 그 후 header.ejs에 네비 부분에 관리자와 일반 사용자에 대한 네비 제작
+
+기본 탐색 스타일 설정 -- header.ejs 에 태그 및 추가 작성
+모바일과 데스크탑 헤더로 나누고 nav-item.ejs에 ul 항목들을 넣고 navigation.css까지 생성
