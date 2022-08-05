@@ -26,4 +26,4 @@ middlewares - check-auth에서 내용 추출
 기본 탐색 스타일 설정 -- header.ejs 에 태그 및 추가 작성
 모바일과 데스크탑 헤더로 나누고 nav-item.ejs에 ul 항목들을 넣고 navigation.css까지 생성
 
-웹사이트 구축 -- 반응형 사이트 구축을 위해 nav.css 에 미디어쿼리 추가
+웹사이트 구축 -- 반응형 사이트 구축을 위해 navigation.css 에 미디어쿼리 추가 및 css 추가 작성
