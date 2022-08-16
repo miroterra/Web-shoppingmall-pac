@@ -27,3 +27,11 @@ middlewares - check-auth에서 내용 추출
 모바일과 데스크탑 헤더로 나누고 nav-item.ejs에 ul 항목들을 넣고 navigation.css까지 생성
 
 웹사이트 구축 -- 반응형 사이트 구축을 위해 navigation.css 에 미디어쿼리 추가 및 css 추가 작성
+
+모바일 메뉴 토글을 위한 프론트엔드 자바스크립트 --
+모바일 메뉴 토글을 위해 public - scripts - mobile.js 생성
+navigation.css 추가 작성
+
+제품 관리 페이지 및 양식 추가 -- 관리 관련 경로를 그룹화 하기 위해 routes - admin-routes.js 생성 -> app.js에 라우트 설정 - 라우트에 대한 컨트롤러 동작을 위해 controllers - admin-controller.js 생성 - 라우트 파일에 함수들 추가
+views - admin - products - all-products.ejs, new-products.ejs 파일 생성 / 기존 all-products.ejs 복사하여 admin 페이지 생성하고 수정
+admin-controller 내용 추가 후 new-products.ejs 내용 추가 및 css 추가

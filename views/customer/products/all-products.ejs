@@ -4,6 +4,10 @@
   <%- include('../../shared/includes/header') %> 
   <main>
     <h1>All Products</h1>
-    <p>A list of products...</p>
+    <p>A list of products...
+    <% if (locals.isAdmin) {%>
+      (Admin)
+    <% } %>  
+    </p>
   </main>
 <%- include('../../shared/includes/footer') %>
