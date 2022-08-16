@@ -35,3 +35,6 @@ navigation.css 추가 작성
 제품 관리 페이지 및 양식 추가 -- 관리 관련 경로를 그룹화 하기 위해 routes - admin-routes.js 생성 -> app.js에 라우트 설정 - 라우트에 대한 컨트롤러 동작을 위해 controllers - admin-controller.js 생성 - 라우트 파일에 함수들 추가
 views - admin - products - all-products.ejs, new-products.ejs 파일 생성 / 기존 all-products.ejs 복사하여 admin 페이지 생성하고 수정
 admin-controller 내용 추가 후 new-products.ejs 내용 추가 및 css 추가
+
+이미지 업로드 기능 추가 -- new-products.ejs 에 form 태그에 enctype 설정 - 파일이 있으므로 multipart/form-data 로 설정 & POST 요청이므로 CSRF 토큰도 작성하는데 enctype 설정으로 이전처럼 input value hidden은 못하고 다른 방식으로 설정
+그 후 파일 업로드 패키지인 multer 설치 - npm install --save multer -> multer 구성을 처리하는 사용자 미들웨어를 만들기 - middlewares - image-upload.js 생성 - 파일 저장 공간도 생성 product-data -> images - filename 작성 과정에서 uuid 패키지 설치 -> 나중에 충돌하는 파일 이름이 없도록 id를 만들고 고유한 파일 이름을 갖도록 함 - 모든 생성한 파일에 내용 추가 작성
