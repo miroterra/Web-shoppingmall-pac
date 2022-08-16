@@ -38,3 +38,6 @@ admin-controller 내용 추가 후 new-products.ejs 내용 추가 및 css 추가
 
 이미지 업로드 기능 추가 -- new-products.ejs 에 form 태그에 enctype 설정 - 파일이 있으므로 multipart/form-data 로 설정 & POST 요청이므로 CSRF 토큰도 작성하는데 enctype 설정으로 이전처럼 input value hidden은 못하고 다른 방식으로 설정
 그 후 파일 업로드 패키지인 multer 설치 - npm install --save multer -> multer 구성을 처리하는 사용자 미들웨어를 만들기 - middlewares - image-upload.js 생성 - 파일 저장 공간도 생성 product-data -> images - filename 작성 과정에서 uuid 패키지 설치 -> 나중에 충돌하는 파일 이름이 없도록 id를 만들고 고유한 파일 이름을 갖도록 함 - 모든 생성한 파일에 내용 추가 작성
+
+더 많은 데이터: 제품 모델 추가 및 데이터베이스에 제품 저장 --
+product-model 제품 관련된 논리를 위한 새 모델 생성 및 작성 - admin-controller에 내용 추가
