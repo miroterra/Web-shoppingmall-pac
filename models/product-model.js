@@ -9,6 +9,19 @@ class Product {
     this.image = productData.image; // the name of the image file
     this.imagePath = `product-data/images/${productData.image}`;
     this.imageUrl = `/products/assets/images/${productData.image}`;
+    if (productData._id) {
+      this.id = productData._id.toString();
+    }
+  }
+
+  // 정적 메소드 - 클래스를 인스턴스화 할 필요가 없고
+  // 현재 데이터가 없기 떄문에 이 클래스를 기반으로 제품을 만들 수 없는 이 경우 사용
+  static async findAll() {
+    const products = await db.getDb().collection('products').find().toArray();
+    //toArray를 이용해 배열로 변경
+    return products.map(function (productDocument) {
+      return new Product(productDocument);
+    });
   }
 
   async save() {

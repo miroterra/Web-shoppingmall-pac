@@ -20,6 +20,7 @@ app.set('view engine', 'ejs'); // ejs
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static('public')); // 정적으로 제공
+app.use('/product/assets', express.static('product-data')); // 이미지를 정적으로 제공
 app.use(express.urlencoded({ extended: false }));
 
 const sessionConfig = createSessionConfig();

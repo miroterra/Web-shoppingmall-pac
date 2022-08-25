@@ -41,3 +41,6 @@ admin-controller 내용 추가 후 new-products.ejs 내용 추가 및 css 추가
 
 더 많은 데이터: 제품 모델 추가 및 데이터베이스에 제품 저장 --
 product-model 제품 관련된 논리를 위한 새 모델 생성 및 작성 - admin-controller에 내용 추가
+
+제품 항목 가져오기 & 출력 -- 제품 리스트들을 그리드 형식으로 보여주기 위해 우선 리스트 요소를 만들 all-products를 추가 작성 - admin/products 폴더에 include - product-item.ejs 생성 - 여기서 리스트를 반복해서 가져올 데이터를 논리를 추가하기 위해 product-model에 findAll 메소드 추가 -
+admin-controller getProducts function에 추가 작성 - 업로드 된 이미지를 정적으로 제공하기 위해 app.js에 app.use express.static 사용
