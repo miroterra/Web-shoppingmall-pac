@@ -1,3 +1,5 @@
+const mongodb = require('mongodb');
+
 const db = require('../data/database');
 
 class Product {
@@ -12,6 +14,27 @@ class Product {
     if (productData._id) {
       this.id = productData._id.toString();
     }
+  }
+
+  static async findById(productId) {
+    let prodId;
+    try {
+      const prodId = new mongodb.ObjectId(productId);
+    } catch (error) {
+      //해당 id 생성에 실패
+      error.code = 404;
+      throw error;
+    }
+    const product = await db.getDb().collection('products').findOne({ _id: prodId });
+
+    //제품을 찾지 못했을때 에러
+    if (!product) {
+      const error = new Error('Could not find product with provided id');
+      error.code = 404;
+      throw error;
+    }
+
+    return product;
   }
 
   // 정적 메소드 - 클래스를 인스턴스화 할 필요가 없고

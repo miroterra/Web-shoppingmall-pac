@@ -44,3 +44,7 @@ product-model 제품 관련된 논리를 위한 새 모델 생성 및 작성 - a
 
 제품 항목 가져오기 & 출력 -- 제품 리스트들을 그리드 형식으로 보여주기 위해 우선 리스트 요소를 만들 all-products를 추가 작성 - admin/products 폴더에 include - product-item.ejs 생성 - 여기서 리스트를 반복해서 가져올 데이터를 논리를 추가하기 위해 product-model에 findAll 메소드 추가 -
 admin-controller getProducts function에 추가 작성 - 업로드 된 이미지를 정적으로 제공하기 위해 app.js에 app.use express.static 사용
+
+제품 아이템 스타일링 -- 제품 리스트 css 작성 public-styles-products.css 작성 - product-item.ejs 를 생성해서 작업 후 css 마무리
+
+제품세부정보 페이지 추가 -- 새로운 보기를 위해 update-product.ejs, product-form.ejs 파일 추가 생성 new-product 파일에 form 부분을 product-form 파일로 이전 하고 update-product 파일에 form 부분을 ejs로 처리 - 새로 추가한 업데이트 페이지를 라우트 하기 위해 admin-routes에 라우트 추가 - 추가한 두개의 라우트에 대한 두개의 컨트롤러 작업을 위해 admin-controller 에 두 함수 추가 - 개별적 id를 찾을수 있는 새로운 정적 메서드 findById를 product-model.js에 만든다
