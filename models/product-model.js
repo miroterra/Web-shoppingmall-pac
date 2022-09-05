@@ -9,8 +9,7 @@ class Product {
     this.price = +productData.price; // +를 추가 하여 string 을 number로 바꿈
     this.description = productData.description;
     this.image = productData.image; // the name of the image file
-    this.imagePath = `product-data/images/${productData.image}`;
-    this.imageUrl = `/products/assets/images/${productData.image}`;
+    this.updateImageDate();
     if (productData._id) {
       this.id = productData._id.toString();
     }
@@ -34,7 +33,7 @@ class Product {
       throw error;
     }
 
-    return product;
+    return new Product(product);
   }
 
   // 정적 메소드 - 클래스를 인스턴스화 할 필요가 없고
@@ -47,6 +46,11 @@ class Product {
     });
   }
 
+  updateImageDate() {
+    this.imagePath = `product-data/images/${this.image}`;
+    this.imageUrl = `/products/assets/images/${this.image}`;
+  }
+
   async save() {
     const productData = {
       title: this.title,
@@ -55,7 +59,25 @@ class Product {
       description: this.description,
       image: this.image,
     };
-    await db.getDb().collection('products').insertOne(productData);
+
+    if (this.id) {
+      const productId = new mongodb.ObjectId(this.id);
+
+      if (!this.image) {
+        delete productDate.image;
+      }
+
+      await db.getDb().collection('products').updateOne({_id: productId}, {
+        $set: productDate
+      });
+    } else {
+      await db.getDb().collection('products').insertOne(productData);
+    }
+  }
+
+  async replaceImage(newImage) {
+    this.image = newImage;
+    this.updateImageDate();
   }
 }
 

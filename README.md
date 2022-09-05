@@ -47,4 +47,8 @@ admin-controller getProducts function에 추가 작성 - 업로드 된 이미지
 
 제품 아이템 스타일링 -- 제품 리스트 css 작성 public-styles-products.css 작성 - product-item.ejs 를 생성해서 작업 후 css 마무리
 
-제품세부정보 페이지 추가 -- 새로운 보기를 위해 update-product.ejs, product-form.ejs 파일 추가 생성 new-product 파일에 form 부분을 product-form 파일로 이전 하고 update-product 파일에 form 부분을 ejs로 처리 - 새로 추가한 업데이트 페이지를 라우트 하기 위해 admin-routes에 라우트 추가 - 추가한 두개의 라우트에 대한 두개의 컨트롤러 작업을 위해 admin-controller 에 두 함수 추가 - 개별적 id를 찾을수 있는 새로운 정적 메서드 findById를 product-model.js에 만든다
+제품세부정보 페이지 추가 -- 새로운 보기를 위해 update-product.ejs, product-form.ejs 파일 추가 생성 new-product 파일에 form 부분을 product-form 파일로 이전 하고 update-product 파일에 form 부분을 ejs로 처리 - 새로 추가한 업데이트 페이지를 라우트 하기 위해 admin-routes에 라우트 추가 - 추가한 두개의 라우트에 대한 두개의 컨트롤러 작업을 위해 admin-controller 에 두 함수 추가 - 개별적 id를 찾을수 있는 새로운 정적 메서드 findById를 product-model.js에 만든다 - product-form에 데이터 추가 - new-product.js에는 빈 공간으로 형성
+
+제품 업데이트(관리자) -- findById로 얻은 Id 로 제품을 업데이트 할 수 있게 admin-controller updateProduct에 추가 -
+product-form, new-product, update-product 세 파일에 내용 추가
+- product-model 에 save 메서드에 새 논리를 추가 - replaceImage 메서드 추가와 나머지 내용 수정 - admin-routes 에 post 요청에 미들웨어를 추가하여 데이터를 받음
