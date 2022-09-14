@@ -54,3 +54,5 @@ product-form, new-product, update-product 세 파일에 내용 추가
 - product-model 에 save 메서드에 새 논리를 추가 - replaceImage 메서드 추가와 나머지 내용 수정 - admin-routes 에 post 요청에 미들웨어를 추가하여 데이터를 받음
 
 파일 업로드 - 미리보기 추가  product-form에 css를 넣기 위해 id 값을 추가하고 forms.css에 css 내용 추가 - 이미지가 사용자가 적용하면 미리보기 형식으로 나올수 있도록 자바스크립트를 구현 image-preview.js를 만들어 작성 - new-product,update-product.ejs 파일에 스크립트 추가
+
+제품 삭제기능 만들기 -- 제품의 인스턴스를 제거 하기 위해 product-model에 remove메서드 생성 - 이 메서드를 컨트롤 하는 동작을 실행하기 위해 admin-controller 에 deleteProduct 함수를 만든다 - admin-routes 에 delete route를 생성
