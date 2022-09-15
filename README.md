@@ -58,3 +58,5 @@ product-form, new-product, update-product 세 파일에 내용 추가
 제품 삭제기능 만들기 -- 제품의 인스턴스를 제거 하기 위해 product-model에 remove메서드 생성 - 이 메서드를 컨트롤 하는 동작을 실행하기 위해 admin-controller 에 deleteProduct 함수를 만든다 - admin-routes 에 delete route를 
 
 Ajax/프론트엔드JS 요청 사용 & DOM 업데이트 -- 프론트엔드 스크립트를 위해 scripts에 product-management.js 생성 - delete 버튼을 클릭하면 그 해당 제품이 삭제가 되도록 만들기 위해 product-item에 있는 delete 버튼에 data-productid를 만들어서 JS에서 지정할 수 있도록 만든다 - csrf토큰이 되도록 내용 추가 하고 JS 파일 완성 - 그 후 에러가 나는 백엔드를 수정(admin-controller.js) 
+
+다양한 수정 & 적절한 경로 보호 -- 서버 에러 설정과 추가 보안을 한다 - 404 에러를 만들고 미들웨어로 작동 시킴 - middlewares - protect-routes.js 생성 하여 추가 보안에 대한 function 을 만든다 - app.js에 새 미들 웨어를 추가 - 그 후 새 에러 페이지인 401,403을 만든다 - 이 페이지를 route 하기 위해 base-routes 파일에 get 라우트를 만든다
