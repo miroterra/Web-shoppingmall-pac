@@ -60,3 +60,5 @@ product-form, new-product, update-product 세 파일에 내용 추가
 Ajax/프론트엔드JS 요청 사용 & DOM 업데이트 -- 프론트엔드 스크립트를 위해 scripts에 product-management.js 생성 - delete 버튼을 클릭하면 그 해당 제품이 삭제가 되도록 만들기 위해 product-item에 있는 delete 버튼에 data-productid를 만들어서 JS에서 지정할 수 있도록 만든다 - csrf토큰이 되도록 내용 추가 하고 JS 파일 완성 - 그 후 에러가 나는 백엔드를 수정(admin-controller.js) 
 
 다양한 수정 & 적절한 경로 보호 -- 서버 에러 설정과 추가 보안을 한다 - 404 에러를 만들고 미들웨어로 작동 시킴 - middlewares - protect-routes.js 생성 하여 추가 보안에 대한 function 을 만든다 - app.js에 새 미들 웨어를 추가 - 그 후 새 에러 페이지인 401,403을 만든다 - 이 페이지를 route 하기 위해 base-routes 파일에 get 라우트를 만든다
+
+고객을 위한 제품 출력 -- 일반 고객일 경우 봐야 할 페이지를 구현 - products-controller.js 생성 - customer 폴더에 all-product 에 for 반복문을 이용하여 제품 목록을 출력 - 관리 영역 출력 하는 것이 아닌 고객들에게도 제품을 출력하기 위해 shared-includes 폴더에 product-item.ejs 를 가져가고 파일 경로 맞춘다
