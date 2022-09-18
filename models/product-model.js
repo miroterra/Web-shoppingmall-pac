@@ -67,9 +67,12 @@ class Product {
         delete productDate.image;
       }
 
-      await db.getDb().collection('products').updateOne({_id: productId}, {
-        $set: productDate
-      });
+      await db.getDb().collection('products').updateOne(
+        { _id: productId },
+        {
+          $set: productDate,
+        }
+      );
     } else {
       await db.getDb().collection('products').insertOne(productData);
     }

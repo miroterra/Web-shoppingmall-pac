@@ -51,16 +51,19 @@ admin-controller getProducts function에 추가 작성 - 업로드 된 이미지
 
 제품 업데이트(관리자) -- findById로 얻은 Id 로 제품을 업데이트 할 수 있게 admin-controller updateProduct에 추가 -
 product-form, new-product, update-product 세 파일에 내용 추가
+
 - product-model 에 save 메서드에 새 논리를 추가 - replaceImage 메서드 추가와 나머지 내용 수정 - admin-routes 에 post 요청에 미들웨어를 추가하여 데이터를 받음
 
-파일 업로드 - 미리보기 추가  product-form에 css를 넣기 위해 id 값을 추가하고 forms.css에 css 내용 추가 - 이미지가 사용자가 적용하면 미리보기 형식으로 나올수 있도록 자바스크립트를 구현 image-preview.js를 만들어 작성 - new-product,update-product.ejs 파일에 스크립트 추가
+파일 업로드 - 미리보기 추가 product-form에 css를 넣기 위해 id 값을 추가하고 forms.css에 css 내용 추가 - 이미지가 사용자가 적용하면 미리보기 형식으로 나올수 있도록 자바스크립트를 구현 image-preview.js를 만들어 작성 - new-product,update-product.ejs 파일에 스크립트 추가
 
-제품 삭제기능 만들기 -- 제품의 인스턴스를 제거 하기 위해 product-model에 remove메서드 생성 - 이 메서드를 컨트롤 하는 동작을 실행하기 위해 admin-controller 에 deleteProduct 함수를 만든다 - admin-routes 에 delete route를 
+제품 삭제기능 만들기 -- 제품의 인스턴스를 제거 하기 위해 product-model에 remove메서드 생성 - 이 메서드를 컨트롤 하는 동작을 실행하기 위해 admin-controller 에 deleteProduct 함수를 만든다 - admin-routes 에 delete route를
 
-Ajax/프론트엔드JS 요청 사용 & DOM 업데이트 -- 프론트엔드 스크립트를 위해 scripts에 product-management.js 생성 - delete 버튼을 클릭하면 그 해당 제품이 삭제가 되도록 만들기 위해 product-item에 있는 delete 버튼에 data-productid를 만들어서 JS에서 지정할 수 있도록 만든다 - csrf토큰이 되도록 내용 추가 하고 JS 파일 완성 - 그 후 에러가 나는 백엔드를 수정(admin-controller.js) 
+Ajax/프론트엔드JS 요청 사용 & DOM 업데이트 -- 프론트엔드 스크립트를 위해 scripts에 product-management.js 생성 - delete 버튼을 클릭하면 그 해당 제품이 삭제가 되도록 만들기 위해 product-item에 있는 delete 버튼에 data-productid를 만들어서 JS에서 지정할 수 있도록 만든다 - csrf토큰이 되도록 내용 추가 하고 JS 파일 완성 - 그 후 에러가 나는 백엔드를 수정(admin-controller.js)
 
 다양한 수정 & 적절한 경로 보호 -- 서버 에러 설정과 추가 보안을 한다 - 404 에러를 만들고 미들웨어로 작동 시킴 - middlewares - protect-routes.js 생성 하여 추가 보안에 대한 function 을 만든다 - app.js에 새 미들 웨어를 추가 - 그 후 새 에러 페이지인 401,403을 만든다 - 이 페이지를 route 하기 위해 base-routes 파일에 get 라우트를 만든다
 
 고객을 위한 제품 출력 -- 일반 고객일 경우 봐야 할 페이지를 구현 - products-controller.js 생성 - customer 폴더에 all-product 에 for 반복문을 이용하여 제품 목록을 출력 - 관리 영역 출력 하는 것이 아닌 고객들에게도 제품을 출력하기 위해 shared-includes 폴더에 product-item.ejs 를 가져가고 파일 경로 맞춘다 - 관리자 일 경우의 상황을 달리 하기 위해 product-item에 내용 추가 - css 파일 추가 및 수정
 
-제품 정보 출력 -- 세부정보 페이지를 위해 customer - product-detail.ejs 생성 - 해당 템플릿을 제공하는 라우트 - product-routes.js 
+제품 정보 출력 -- 세부정보 페이지를 위해 customer - product-detail.ejs 생성 - 해당 템플릿을 제공하는 라우트 - product-routes.js - 컨트롤러 - products-controller.js 에 내용 추가
+
+카트 모델 추가 -- 장바구니 버튼을 만들었으니 동작 하도록 만들어야하므로 - cart-model 과 cart-controller를 만든다 - 컨트롤러를 출력 하기 위해 미들웨어를 추가 - cart.js - 해당 미들웨어를 활성화 하기 위해 app.js 에 내용 추가
