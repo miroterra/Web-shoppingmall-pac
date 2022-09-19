@@ -73,3 +73,5 @@ Ajax/프론트엔드JS 요청 사용 & DOM 업데이트 -- 프론트엔드 스�
 Ajax요청을 통해 장바구니 항목 추가 -- cart-management.js 생성하여 버튼을 클릭하면 장바구니에 담기는 요청을 보내는 함수를 만든다 - 이 요청을 보내기 위해 라우트 추가 - cart-routes.js 생성 - app.js에 라우트 추가 - 내용정리
 
 장바구니 페이지 추가 -- 장바구니 페이지를 새로 만들기 위해 cart.ejs, cart-item.ejs, cart.css를 추가 - cart관련 다른 js 에 내용 추가
+
+장바구니 페이지 스타일링 -- css 작업
