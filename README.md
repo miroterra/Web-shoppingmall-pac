@@ -79,3 +79,5 @@ Ajax요청을 통해 장바구니 항목 추가 -- cart-management.js 생성하�
 장바구니 품목 업데이트(수량변경) -- 업데이트 버튼을 누르면 요청을 할수 있도록 cart 관련 컨트롤러, 라우트, 모델 내용 추가
 
 Ajax요청을 통한 카트 업데이트(patch 요청) -- updateItemController 동작을 트리거할 에이잭스 요청을 보내기 위해 - cart-item-management.js 추가 - 에이잭스 요청
+
+장바구니 항목 업데이트 후 DOM 업데이트 -- 나머지 장바구니 관련 논리 추가
