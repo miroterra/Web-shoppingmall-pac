@@ -15,6 +15,7 @@ const authRoutes = require('./routes/auth-routes'); // auth 라우트 가져오�
 const productsRoutes = require('./routes/products-routes');
 const baseRoutes = require('./routes/base-routes');
 const adminRoutes = require('./routes/admin-routes');
+const cartRoutes = require('./routes/cart-routes');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public')); // 정적으로 제공
 app.use('/product/assets', express.static('product-data')); // 이미지를 정적으로 제공
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const sessionConfig = createSessionConfig();
 
@@ -38,6 +40,7 @@ app.use(checkAuthStatusMiddleware);
 app.use(baseRoutes);
 app.use(authRoutes);
 app.use(productsRoutes);
+app.use('/cart', cartRoutes);
 app.use(protectRoutesMiddleware);
 app.use('/admin', adminRoutes); //라우트 설정을 이렇게 하면  /admin 이 기본 경로로 설정이 된다
 
