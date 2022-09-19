@@ -67,3 +67,5 @@ Ajax/프론트엔드JS 요청 사용 & DOM 업데이트 -- 프론트엔드 스�
 제품 정보 출력 -- 세부정보 페이지를 위해 customer - product-detail.ejs 생성 - 해당 템플릿을 제공하는 라우트 - product-routes.js - 컨트롤러 - products-controller.js 에 내용 추가
 
 카트 모델 추가 -- 장바구니 버튼을 만들었으니 동작 하도록 만들어야하므로 - cart-model 과 cart-controller를 만든다 - 컨트롤러를 출력 하기 위해 미들웨어를 추가 - cart.js - 해당 미들웨어를 활성화 하기 위해 app.js 에 내용 추가
+
+장바구니 논리 작업 -- 이전 작업에 추가 작업 진행 - 컨트롤러 동작에서 제품에 도달하기 위해 데이터 베이스 접근 - cart-controller.js에 내용 추가 - cart-model에 내용 추가 - 장바구니에 추가된 갯수 배지를 만든다 - base.css에 내용 추가
