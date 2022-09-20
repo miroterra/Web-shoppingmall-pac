@@ -81,3 +81,5 @@ Ajax요청을 통해 장바구니 항목 추가 -- cart-management.js 생성하�
 Ajax요청을 통한 카트 업데이트(patch 요청) -- updateItemController 동작을 트리거할 에이잭스 요청을 보내기 위해 - cart-item-management.js 추가 - 에이잭스 요청
 
 장바구니 항목 업데이트 후 DOM 업데이트 -- 나머지 장바구니 관련 논리 추가
+
+주문 컨트롤러 & 기본 주문 모델 추가 -- 제품 구매 버튼을 누르면 장바구니 내용을 주문 할 수 있게 만들기 - cart.ejs에 내용 추가 하면서 /order로 연결 되는 form 을 만들고 order 관련 컨트롤러와 라우트, 모델을 만든다 - orders-controller.js, orders-routes.js - app.js에 orderRoutes를 등록 - order-model 내용 추가

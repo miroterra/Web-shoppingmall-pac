@@ -16,6 +16,7 @@ const productsRoutes = require('./routes/products-routes');
 const baseRoutes = require('./routes/base-routes');
 const adminRoutes = require('./routes/admin-routes');
 const cartRoutes = require('./routes/cart-routes');
+const orderRoutes = require('./routes/orders-routes');
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use(authRoutes);
 app.use(productsRoutes);
 app.use('/cart', cartRoutes);
 app.use(protectRoutesMiddleware);
+app.use('/orders', orderRoutes);
 app.use('/admin', adminRoutes); //라우트 설정을 이렇게 하면  /admin 이 기본 경로로 설정이 된다
 
 app.use(errorHandlerMiddleware);
