@@ -6,4 +6,6 @@ const router = express.Router(); //라우터 개체 구성
 
 router.post('/', ordersController.addOrder);
 
+router.get('/', ordersController.getOrder);
+
 module.exports = router;
