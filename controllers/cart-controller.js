@@ -1,6 +1,6 @@
 const Product = require('../models/product-model');
 
-function getCart(req, res) {
+async function getCart(req, res) {
   res.render('customer/cart/cart');
 }
 async function addCartItem(req, res, next) {

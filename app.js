@@ -11,6 +11,7 @@ const errorHandlerMiddleware = require('./middlewares/error-handler'); //에러 
 const checkAuthStatusMiddleware = require('./middlewares/check-auth');
 const protectRoutesMiddleware = require('./middlewares/protect-routes'); // 추가 보안
 const cartMiddleware = require('./middlewares/cart'); // 카트(장바구니)
+const updateCartPricesMiddleware = require('./middlewares/update-cart-price');
 const authRoutes = require('./routes/auth-routes'); // auth 라우트 가져오기
 const productsRoutes = require('./routes/products-routes');
 const baseRoutes = require('./routes/base-routes');
@@ -34,6 +35,7 @@ app.use(expressSession(sessionConfig));
 app.use(csrf());
 
 app.use(cartMiddleware);
+app.use(updateCartPricesMiddleware);
 
 app.use(addCsrfTokenMiddleware);
 app.use(checkAuthStatusMiddleware);
