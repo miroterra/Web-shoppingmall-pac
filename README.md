@@ -89,3 +89,5 @@ Ajax요청을 통한 카트 업데이트(patch 요청) -- updateItemController �
 주문 표시 (고객 & 관리자용) -- 내용 전면 수정
 
 버그 수정 -- not-found 페이지 생성
+
+스트라이프 API 요청설정 -- npm install --save stripe - 결제 요청 API 설정
