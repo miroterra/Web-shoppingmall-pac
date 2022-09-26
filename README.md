@@ -91,3 +91,5 @@ Ajax요청을 통한 카트 업데이트(patch 요청) -- updateItemController �
 버그 수정 -- not-found 페이지 생성
 
 스트라이프 API 요청설정 -- npm install --save stripe - 결제 요청 API 설정
+
+스트라이프 요청 구성 & 지불 처리 -- 스트라이프 기본 정리
